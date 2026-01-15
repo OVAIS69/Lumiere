@@ -21,3 +21,9 @@ MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/lumiere-jew
 
 ## 4. Post-Deployment
 After deployment, if you are using a real database, ensure your IP whitelist in MongoDB Atlas includes Vercel's IP addresses (or allow access from anywhere `0.0.0.0/0` for initial testing).
+
+## 5. Frontend-Only Demo (No Database)
+If you want to deploy **without** a database for a visual demo:
+- You do **NOT** need to set `MONGODB_URI`.
+- The application is currently using mock data (`src/lib/data.ts`) for the UI, so it will work perfectly as a frontend showcase out of the box.
+- The backend connection code handles missing environment variables gracefully without crashing.
