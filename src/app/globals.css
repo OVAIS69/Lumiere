@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F9F9F5;
+  --color-champagne: #D4AF37;
+  --color-champagne-light: #E5C595;
+  --color-bronze: #CD7F32;
+  --color-rose-gold: #B76E79;
+  --color-deep-black: #0A0A0A;
+  --color-emerald: #043927;
+  --color-charcoal: #121212;
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+
+  --spacing-128: 32rem;
+  --spacing-144: 36rem;
+
+  --animate-fade-in: fadeIn 1s ease-out forwards;
+  --animate-slide-up: slideUp 0.8s ease-out forwards;
+  --animate-shimmer: shimmer 2s linear infinite;
+}
+
+:root {
+  --background: #F9F9F5;
+  --foreground: #0A0A0A;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400; /* Editorial feel */
+}
